@@ -28,5 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Git commit command
 git add .
+<br/>
 git commit -m "commit command"
+<br/>
 git push -u origin main
