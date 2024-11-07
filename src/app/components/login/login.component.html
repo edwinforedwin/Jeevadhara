@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container">
+    <div class="login container">
+        <div class="logo">
+            <img src="Jeevadhara_transparent.png" width="280px" />
+        </div>
+        <div class="title">
+            Loan Portal
+        </div>
+        <div class="fields">
+            <input type="text" pInputText [(ngModel)]="username" placeholder="Username" [style]="{width:'280px',height:'28px'}" />
+        </div>
+        <div class="fields">
+            <input type="password" pInputText [(ngModel)]="securic" placeholder="Password" [style]="{width:'280px',height:'28px'}" />
+        </div>
+        <div class="fields">
+            <p-button label="Login" [style]="{width:'100px',height:'32px'}" />
+        </div>
+        <div class="fields">
+            Forgot password?
+        </div>
+    </div>
+</div>
