@@ -34,3 +34,5 @@ git add .
 git commit -m "commit command"
 <br/>
 git push -u origin main
+
+The application will be tested at TCOE manner.
