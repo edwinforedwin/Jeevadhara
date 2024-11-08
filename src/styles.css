@@ -2,4 +2,5 @@
 @import "primeng/resources/primeng.css";
 html, body {
     margin: 0;
+    font-family: 'Trebuchet MS';
 }
