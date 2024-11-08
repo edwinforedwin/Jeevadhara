@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuModule } from 'primeng/menu';
 import { MenuItem } from 'primeng/api';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @Component({
   selector: 'app-userhome',
   standalone: true,
   imports: [
-    MenuModule
+    MenuModule, OverlayPanelModule
   ],
   templateUrl: './userhome.component.html',
   styleUrl: './userhome.component.css'
@@ -17,7 +18,11 @@ export class UserhomeComponent implements OnInit {
     ngOnInit() {
         this.items = [
             { label: 'Home', icon: 'pi pi-home' },
-            { label: 'Sanction Pending', icon: 'pi pi-search' }
+            { label: 'KYC Verification', icon: 'pi pi-search'},
+            { label: 'Data Updation', icon: 'pi pi-pencil'},
+            { label: 'Sanction', icon: 'pi pi-check-square' },
+            { label: 'Reports', icon: 'pi pi-book' }
+
         ];
     }
 }

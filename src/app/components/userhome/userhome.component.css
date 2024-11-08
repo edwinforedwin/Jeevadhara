@@ -8,7 +8,7 @@
 }
 .top {
     height: 8%;
-    background: linear-gradient(90deg, rgba(172,34,34,1) 0%, rgba(80,72,190,1) 100%);
+    background: linear-gradient(90deg, rgba(19,82,87,1) 0%, rgba(72,190,111,1) 80%);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -20,10 +20,10 @@
 }
 .bottom {
     height: 4%;
-    background: linear-gradient(90deg, rgba(172,34,34,1) 0%, rgba(80,72,190,1) 100%);
+    background: linear-gradient(90deg, rgba(19,82,87,1) 0%, rgba(72,190,111,1) 80%);
     align-items: center;
     color: white;
-    font-size: 2px;
+    font-size: 12px;
     font-weight: bold;
 }
 img {
@@ -38,11 +38,27 @@ img {
     align-items: center;
     color: white;
     font-weight: bold;
+    font-size: 12px;
 }
 .main-sub-menu {
     width: 15%;
+    margin-left: 4px;
     margin-top: 4px;
     margin-bottom: 4px;
     border-radius: 10px;
     color: white;
+}
+::ng-deep .p-menuitem-text {
+    color: black;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+::ng-deep .p-menuitem {
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(153, 126, 126, 0.2), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    border-radius: 5px;
+}
+::ng-deep .p-menu {
+    border: 0;
 }
