@@ -1,6 +1,4 @@
-# Jeevadhara
-
-The project is a platform for providing unsecured loans to customers in micro-finance model.
+# Jeevadhara - Loan Originating System
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
