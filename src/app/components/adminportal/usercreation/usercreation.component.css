@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#name {
+    width: 370px;
+}
+#mobileno {
+    width: 370px;
+}
+#address {
+    width: 750px;
+}
+#email {
+    width: 240px;
+}
+::ng-deep .p-inputtext {
+    font-family: 'Trebuchet MS';
+    height: 40px;
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+::ng-deep .p-dropdown {
+    width: 240px;
+}
+::ng-deep .p-calendar {
+    width: 240px;
+}
+.field-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.mainSections {
+    display: flex;
+    gap: 20px;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+}
+::ng-deep .p-card-content {
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Trebuchet MS';
+    text-align: justify;
+}

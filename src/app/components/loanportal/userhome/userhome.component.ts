@@ -4,7 +4,7 @@ import { MenuItem } from 'primeng/api';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @Component({
-  selector: 'app-userhome',
+  selector: 'app-userhome-Loan',
   standalone: true,
   imports: [
     MenuModule, OverlayPanelModule
@@ -12,7 +12,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
   templateUrl: './userhome.component.html',
   styleUrl: './userhome.component.css'
 })
-export class UserhomeComponent implements OnInit {
+export class UserhomeComponentLoan implements OnInit {
   items: MenuItem[] | undefined;
 
     ngOnInit() {

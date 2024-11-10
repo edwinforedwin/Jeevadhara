@@ -1,0 +1,31 @@
+<div class=" full container">
+    <div class="top container">
+        <div class="top-container-div">
+            <div>
+                <img src="Jeevadhara_transparent_tagline.png" alt="app-logo" width="120px" />
+            </div>
+            <div class="portal">
+                - Admin Portal
+            </div>
+        </div>
+        <div class="top-container-div">
+            <div>
+                Edwin U Kannanaikkal
+            </div>            
+            <div>
+                <img src="logout.png" alt="logout" width="25px">
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-sub-menu">
+            <p-menu [model]="items" [style]="{width:'100%',fontSize:'14px',fontWeight:'bold'}" />
+        </div>
+        <div class="main-sub-view ">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="bottom container">
+        Version 1.0.0
+    </div>
+</div>

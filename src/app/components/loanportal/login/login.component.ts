@@ -3,8 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
+
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-Loan',
   standalone: true,
   imports: [
     InputTextModule, FormsModule, ButtonModule
@@ -12,7 +13,7 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit{
+export class LoginComponentLoan implements OnInit{
   username: string = '';
   securic: string = '';
   ngOnInit() {
