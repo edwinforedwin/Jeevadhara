@@ -55,8 +55,8 @@
     text-align: justify;
 }
 ::ng-deep .p-button {
-    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
-    width: 240px;
+    background: rgb(19,82,87);
+    width: 200px;
     border: 0;
-    color: black;
+    font-family: 'Trebuchet MS';
 }

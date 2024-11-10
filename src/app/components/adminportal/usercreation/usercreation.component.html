@@ -22,10 +22,10 @@
                     <p-dropdown [options]="portals" [(ngModel)]="selectedPortal" optionLabel="dropName" placeholder="Select Portal Access" />
                 </div>
                 <div>
-                    <p-calendar inputId="calendar-timeonly" [(ngModel)]="timeFrom" [timeOnly]="true" placeholder="From Time" />
+                    <p-calendar [(ngModel)]="timeFrom" [timeOnly]="true" placeholder="From Time" />
                 </div>
                 <div>
-                    <p-calendar inputId="calendar-timeonly" [(ngModel)]="timeTo" [timeOnly]="true" placeholder="To Time" />
+                    <p-calendar [(ngModel)]="timeTo" [timeOnly]="true" placeholder="To Time" />
                 </div>
             </div>
             <div class="field-group">
