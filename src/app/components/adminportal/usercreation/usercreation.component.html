@@ -39,6 +39,14 @@
                     <input type="text" pInputText [(ngModel)]="email" placeholder="Email" id="email" />          
                 </div>
             </div>
+            <div class="field-group">
+                <div>
+                    <p-dropdown [options]="userTypes" [(ngModel)]="selectedUT" optionLabel="dropName" placeholder="Select User Type" />
+                </div>
+                <div>
+                    <p-button label="Submit" />
+                </div>
+            </div>
         </div>
         <div>
             <p-card header="Know Your Menu">

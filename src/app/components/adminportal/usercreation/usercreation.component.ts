@@ -4,6 +4,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 interface dropLists {
   dropid: number,
@@ -13,7 +14,7 @@ interface dropLists {
 @Component({
   selector: 'app-usercreation',
   standalone: true,
-  imports: [InputTextModule,FormsModule,DropdownModule,CalendarModule,CardModule],
+  imports: [InputTextModule,FormsModule,DropdownModule,CalendarModule,CardModule,ButtonModule],
   templateUrl: './usercreation.component.html',
   styleUrl: './usercreation.component.css'
 })
@@ -40,4 +41,9 @@ export class UsercreationComponent {
   ]
   selectedSPB: dropLists[]=[]
   email: string = ''
+  userTypes: dropLists[] = [
+    {dropid:1,dropName:"Bank Employee"},
+    {dropid:2,dropName:"Custom User"}
+  ]
+  selectedUT: dropLists[]=[]
 }
