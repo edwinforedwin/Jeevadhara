@@ -32,6 +32,7 @@
 }
 ::ng-deep .p-dropdown {
     width: 240px;
+    font-family: 'Trebuchet MS';
 }
 ::ng-deep .p-calendar {
     width: 240px;
