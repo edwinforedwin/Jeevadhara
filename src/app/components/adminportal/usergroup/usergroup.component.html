@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="content">
+        <div class="sub-section">
+            <div class="menu title">
+                User Groups
+            </div>
+            <div class="menu creation">
+                <div>
+                    <input type="text" pInputText [(ngModel)]="name" placeholder="User Group Name" id="name" [style]="{width:'100%'}" />
+                </div>
+                <div class="section-two">
+                    <div class="description">
+                        <input type="text" pInputText [(ngModel)]="description" placeholder="User Group Description" id="description" [style]="{width:'100%'}" />
+                    </div>
+                    <div class="dashboard">
+                        <p-dropdown [options]="dashboards" [(ngModel)]="selectedDashboard" optionLabel="dropname" placeholder="Select dashbooard" [style]="{width:'100%'}" />
+                    </div>
+                </div>
+                <div class="section-three">
+                    <div class="fieldset">
+                        <p-fieldset legend="Portals">
+                            <div class="menu-list">
+                            @for (item of portalList; track $index) {
+                                <p-checkbox [label]="item.dropname" [binary]="true"></p-checkbox>
+                            }
+                            </div>
+                        </p-fieldset>
+                    </div>
+                    <div class="fieldset">
+                        <p-fieldset legend="Menu Privileges">
+                            <div class="menu-list">
+                            @for (item of menuList; track $index) {
+                                <p-checkbox [label]="item.dropname" [binary]="true"></p-checkbox>
+                            }
+                            </div>
+                        </p-fieldset>
+                    </div>
+                    <div class="buttons">
+                        <div class="sub-buttons">
+                            <p-button label="Submit" />
+                        </div>
+                        <div class="sub-buttons">
+                            <p-button label="View" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            Users will be classifed in different users groups for managing the same in higher level.
+        </p-card>
+    </div>
+</div>

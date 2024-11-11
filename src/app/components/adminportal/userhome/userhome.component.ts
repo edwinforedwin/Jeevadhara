@@ -20,7 +20,7 @@ export class UserhomeComponentAdmin implements OnInit {
     this.items = [
         { label: 'Home', icon: 'pi pi-home',routerLink:'dashboard'},
         { label: 'Product Management', icon: 'pi pi-compass'},
-        { label: 'User Groups', icon: 'pi pi-users'},
+        { label: 'User Groups', icon: 'pi pi-users',routerLink:'usergroup'},
         { label: 'User Creation', icon: 'pi pi-user',routerLink:'usercreation'},
         { label: 'User Modification', icon: 'pi pi-user-edit'},
         { label: 'Business Rule Engine', icon: 'pi pi-cog' },

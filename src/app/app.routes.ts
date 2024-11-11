@@ -5,6 +5,7 @@ import { LoginComponentAdmin } from './components/adminportal/login/login.compon
 import { UserhomeComponentAdmin } from './components/adminportal/userhome/userhome.component';
 import { UsercreationComponent } from './components/adminportal/usercreation/usercreation.component';
 import { AdmindashboardComponent } from './components/adminportal/admindashboard/admindashboard.component';
+import { UsergroupComponent } from './components/adminportal/usergroup/usergroup.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -13,7 +14,8 @@ export const routes: Routes = [
     {path:'jeevadhara/adminportal/userhome',component:UserhomeComponentAdmin,
         children:[
             {path:'usercreation',component:UsercreationComponent},
-            {path:'dashboard',component:AdmindashboardComponent}
+            {path:'dashboard',component:AdmindashboardComponent},
+            {path:'usergroup',component:UsergroupComponent}
         ]
     }
 ];
