@@ -7,6 +7,7 @@ import { UsercreationComponent } from './components/adminportal/usercreation/use
 import { AdmindashboardComponent } from './components/adminportal/admindashboard/admindashboard.component';
 import { UsergroupComponent } from './components/adminportal/usergroup/usergroup.component';
 import { DevicewhitelistingComponent } from './components/adminportal/devicewhitelisting/devicewhitelisting.component';
+import { ReportsComponent } from './components/adminportal/reports/reports.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -17,7 +18,8 @@ export const routes: Routes = [
             {path:'usercreation',component:UsercreationComponent},
             {path:'dashboard',component:AdmindashboardComponent},
             {path:'usergroup',component:UsergroupComponent},
-            {path:'devicewhitelisting',component:DevicewhitelistingComponent}
+            {path:'devicewhitelisting',component:DevicewhitelistingComponent},
+            {path:'reports',component:ReportsComponent}
         ]
     }
 ];

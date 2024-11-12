@@ -24,7 +24,7 @@ export class UserhomeComponentAdmin implements OnInit {
         { label: 'Users', icon: 'pi pi-user',routerLink:'usercreation'},
         { label: 'Business Rule Engine', icon: 'pi pi-cog' },
         { label: 'Device Whitelisting', icon: 'pi pi-mobile',routerLink:'devicewhitelisting' },
-        { label: 'Reports', icon: 'pi pi-book' }
+        { label: 'Reports', icon: 'pi pi-book',routerLink:'reports' }
     ];
 }
 }
