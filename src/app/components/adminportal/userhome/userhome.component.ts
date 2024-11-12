@@ -22,7 +22,7 @@ export class UserhomeComponentAdmin implements OnInit {
         { label: 'Product Configuration', icon: 'pi pi-compass',routerLink:'product'},
         { label: 'User Groups', icon: 'pi pi-users',routerLink:'usergroup'},
         { label: 'Users', icon: 'pi pi-user',routerLink:'usercreation'},
-        { label: 'Business Rule Engine', icon: 'pi pi-cog' },
+        { label: 'Business Rule Engine', icon: 'pi pi-cog',routerLink:'ruleengine' },
         { label: 'Device Whitelisting', icon: 'pi pi-mobile',routerLink:'devicewhitelisting' },
         { label: 'Reports', icon: 'pi pi-book',routerLink:'reports' }
     ];

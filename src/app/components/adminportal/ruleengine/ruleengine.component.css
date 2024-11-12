@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+}
+.help {
+    width: 30%;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
+}
+::ng-deep .p-card-content {
+    text-align: justify;
+}
+::ng-deep .p-inputtext {
+    width: 100%;
+}
+::ng-deep .p-multiselect {
+    width: 100%;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.field-set {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.field-set-sub {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.inputbox {
+    width: 50%;
+}
+.field-set-sux {
+    widows: 100%;
+}
+.conditions {
+    width: 25%;
+}

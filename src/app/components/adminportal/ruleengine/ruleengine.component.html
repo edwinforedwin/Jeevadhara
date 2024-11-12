@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            Business Rule Engine
+        </div>
+        <div class="field-set">
+            <div class="field-set-sub">
+                <div class="inputbox">
+                    <input type="text" pInputText [(ngModel)]="rulename" placeholder="Rule Name" />
+                </div>
+                <div class="inputbox">
+                    <input type="text" pInputText [(ngModel)]="ruledescription" placeholder="Rule Description" />
+                </div>
+            </div>
+            <div class="field-set-sux">
+                <p-multiSelect [options]="rulemapping" [(ngModel)]="selectedMapping" optionLabel="dropName" placeholder="Select Rule Mapping" />
+            </div>
+            <div class="field-set-sub">
+                <div class="conditions">
+                    <input type="text" pInputText [(ngModel)]="dpddays" placeholder="DPD Days" />
+                </div>
+                <div class="conditions">
+                    <input type="text" pInputText [(ngModel)]="activeloans" placeholder="Active Loans" />
+                </div>
+                <div class="conditions">
+                    <input type="text" pInputText [(ngModel)]="outstandingamount" placeholder="Outstanding Amount" />
+                </div>
+                <div class="conditions">
+                    <input type="text" pInputText [(ngModel)]="jlgactiveloans" placeholder="Active JLG Loans" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            Automated checks on loan sanction conditions can be configured here including credit report bifurcation
+        </p-card>
+    </div>
+</div>
