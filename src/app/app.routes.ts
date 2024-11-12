@@ -6,6 +6,7 @@ import { UserhomeComponentAdmin } from './components/adminportal/userhome/userho
 import { UsercreationComponent } from './components/adminportal/usercreation/usercreation.component';
 import { AdmindashboardComponent } from './components/adminportal/admindashboard/admindashboard.component';
 import { UsergroupComponent } from './components/adminportal/usergroup/usergroup.component';
+import { DevicewhitelistingComponent } from './components/adminportal/devicewhitelisting/devicewhitelisting.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -15,7 +16,8 @@ export const routes: Routes = [
         children:[
             {path:'usercreation',component:UsercreationComponent},
             {path:'dashboard',component:AdmindashboardComponent},
-            {path:'usergroup',component:UsergroupComponent}
+            {path:'usergroup',component:UsergroupComponent},
+            {path:'devicewhitelisting',component:DevicewhitelistingComponent}
         ]
     }
 ];
