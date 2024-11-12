@@ -16,4 +16,22 @@
             <p-card header="Disbursements">3400</p-card>
         </div>
     </div>
+    <div class="pendingsection">
+        @for (item of pendingitems; track $index) {
+        <div class="pendinglist">
+            <div class="pendingitem">
+                <div>
+                    <i class="pi pi-list-check" style="font-size: 2.5rem"></i>
+                </div>
+                <div class="pendingsubject">
+                    <div>Device Whitelisting</div>
+                    <div>#10248</div>
+                    <div>Submitted By: edwinuk</div>
+                </div>
+            </div>
+            <div>
+                <p-button label="Authenticate" />
+            </div>
+        </div>}
+    </div>
 </div>

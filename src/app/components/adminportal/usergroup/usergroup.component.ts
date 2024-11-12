@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FieldsetModule } from 'primeng/fieldset';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 interface dropLists {
   dropid: number,
@@ -15,7 +16,7 @@ interface dropLists {
 @Component({
   selector: 'app-usergroup',
   standalone: true,
-  imports: [InputTextModule,FormsModule,CardModule,DropdownModule,FieldsetModule,CheckboxModule,ButtonModule],
+  imports: [InputTextModule,FormsModule,CardModule,DropdownModule,FieldsetModule,CheckboxModule,ButtonModule,FloatLabelModule],
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })

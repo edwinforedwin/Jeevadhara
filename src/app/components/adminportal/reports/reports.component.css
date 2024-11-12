@@ -20,7 +20,20 @@
 ::ng-deep .p-dropdown {
     width: 100%;
 }
+::ng-deep .p-dropdown-label {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+::ng-deep .p-dropdown-items {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
 ::ng-deep .p-card {
     box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
     background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
+    font-family: 'Trebuchet MS';
+}
+::ng-deep .p-card-content {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
 }

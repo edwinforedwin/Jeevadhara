@@ -29,12 +29,12 @@
 .creation {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 .sub-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 .section-two {
     display: flex;
@@ -54,6 +54,8 @@
     height: 200px;
     width: 100%;
     overflow-y:auto;
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
 }
 .menu-list {
     display: flex;
@@ -84,4 +86,16 @@
     background-color: rgb(19,82,87);
     width: 100%;
     border: 0;
+    font-family: 'Trebuchet MS';
+}
+label {
+    font-size: 12px;
+}
+::ng-deep .p-dropdown-items {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+::ng-deep .p-dropdown-label {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
 }

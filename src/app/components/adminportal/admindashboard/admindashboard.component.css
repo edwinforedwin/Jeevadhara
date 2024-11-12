@@ -2,24 +2,28 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 20px;
+    height: 100%;
+    gap: 10px;
 }
 .counts {
     display: flex;
     gap: 20px;
     width: 100%;
+    height: 30%;
 }
 ::ng-deep .p-card {
     box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
     background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
     width: 100%;
     text-align: center;
-    color: black;
+    height: 120px;
+    font-family: 'Trebuchet MS';
 }
 ::ng-deep .p-card-content {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 900;
+    font-family: 'Trebuchet MS';
 }
 .cards {
     width: 100%;
@@ -28,4 +32,41 @@
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
+    height: 8%;
+}
+.pendingitem {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.pendingsubject {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+}
+.pendinglist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(19,82,87);
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(215, 226, 227) 0%, rgb(162, 194, 173) 80%);
+}
+::ng-deep .p-button {
+    background: rgb(19,82,87);
+    border: 0;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+.pendingsection {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 62%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

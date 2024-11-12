@@ -6,14 +6,23 @@
             </div>
             <div class="menu creation">
                 <div>
-                    <input type="text" pInputText [(ngModel)]="name" placeholder="User Group Name" id="name" [style]="{width:'100%'}" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="name" id="name" [style]="{width:'100%'}" />
+                        <label for="name">User Group Name</label>
+                    </p-floatLabel>
                 </div>
                 <div class="section-two">
                     <div class="description">
-                        <input type="text" pInputText [(ngModel)]="description" placeholder="User Group Description" id="description" [style]="{width:'100%'}" />
+                        <p-floatLabel>
+                            <input type="text" pInputText [(ngModel)]="description" id="description" [style]="{width:'100%'}" />
+                            <label for="description">User Group Description</label>
+                        </p-floatLabel>
                     </div>
                     <div class="dashboard">
-                        <p-dropdown [options]="dashboards" [(ngModel)]="selectedDashboard" optionLabel="dropname" placeholder="Select dashbooard" [style]="{width:'100%'}" />
+                        <p-floatLabel>
+                            <p-dropdown [options]="dashboards" [(ngModel)]="selectedDashboard" optionLabel="dropname" [style]="{width:'100%'}" />
+                            <label for="selectedDashboard">Select dashbooard</label>
+                        </p-floatLabel>
                     </div>
                 </div>
                 <div class="section-three">

@@ -6,46 +6,82 @@
         <div class="field-class">
             <div class="field-sets">
                 <div class="fields-one">
-                    <input type="text" pInputText [(ngModel)]="name" placeholder="Product Name" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="name" />
+                        <label for="name">Product Name</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-one">
-                    <input type="text" pInputText [(ngModel)]="description" placeholder="Product Description" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="description" />
+                        <label for="description">Product Description</label>
+                    </p-floatLabel>
                 </div>
             </div>
             <div class="field-sets">
                 <div class="fields-two">
-                    <input type="text" pInputText [(ngModel)]="schemecode" placeholder="Scheme Code" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="schemecode" />
+                        <label for="schemecode">Scheme Code</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-two">
-                    <input type="text" pInputText [(ngModel)]="subheadcode" placeholder="Subhead Code" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="subheadcode" />
+                        <label for="subheadcode">Subhead Code</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-two">
-                    <input type="text" pInputText [(ngModel)]="inttablecode" placeholder="Intrest Table Code" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="inttablecode" />
+                        <label for="inttablecode">Interest Table Code</label>
+                    </p-floatLabel>
                 </div>
             </div>
             <div class="field-sets">
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="minloanamount" placeholder="Min Loan Value" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="minloanamount" />
+                        <label for="minloanamount">Min Loan Value</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="maxloanamount" placeholder="Max Loan Value" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="maxloanamount" />
+                        <label for="maxloanamount">Max Loan Value</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="mininterest" placeholder="Min Interest" />
+                    <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="mininterest" />
+                    <label for="mininterest">Min Interest</label>
+                </p-floatLabel>
                 </div>
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="maxinterest" placeholder="Max Interest" />
+                    <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="maxinterest" />
+                    <label for="maxinterest">Max Interest</label>
+                </p-floatLabel>
                 </div>
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="mintenure" placeholder="Min Tenure" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="mintenure" />
+                        <label for="mintenure">Min Tenure</label>
+                    </p-floatLabel>
                 </div>
                 <div class="fields-three">
-                    <input type="text" pInputText [(ngModel)]="maxtenure" placeholder="Max Tenure" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="maxtenure" />
+                        <label for="maxtenure">Max Tenure</label>
+                    </p-floatLabel>
                 </div>
             </div>
             <div class="field-sets">
                 <div class="fields-one">
-                    <p-dropdown [options]="mapping" [(ngModel)]="selectedMapping" optionLabel="dropName" placeholder="Select Product Mapping" />
+                    <p-floatLabel>
+                        <p-dropdown [options]="mapping" [(ngModel)]="selectedMapping" optionLabel="dropName" />
+                        <label for="selectedMapping">Select Product Mapping</label>
+                    </p-floatLabel>
                 </div>
                 <div class="field-four">
                     <p-button label="Submit" />

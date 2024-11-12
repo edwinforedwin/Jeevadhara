@@ -5,11 +5,12 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { dropLists } from '../usercreation/usercreation.component'
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [ButtonModule,DropdownModule,CardModule,InputTextModule,FormsModule],
+  imports: [ButtonModule,DropdownModule,CardModule,InputTextModule,FormsModule,FloatLabelModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

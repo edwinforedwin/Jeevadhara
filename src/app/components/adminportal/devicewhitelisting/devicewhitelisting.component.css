@@ -24,10 +24,12 @@
 ::ng-deep .p-inputtext {
     width: 100%;
     font-family: 'Trebuchet MS';
+    font-size: 12px;
 }
 ::ng-deep .p-card-content {
     text-align: justify;
     font-family: 'Trebuchet MS';
+    font-size: 12px;
 }
 ::ng-deep .p-card-header {
     font-family: 'Trebuchet MS';

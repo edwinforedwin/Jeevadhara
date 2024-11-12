@@ -6,27 +6,56 @@
         <div class="field-set">
             <div class="field-set-sub">
                 <div class="inputbox">
-                    <input type="text" pInputText [(ngModel)]="rulename" placeholder="Rule Name" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="rulename" />
+                        <label for="rulename">Rule Name</label>
+                    </p-floatLabel>
                 </div>
                 <div class="inputbox">
-                    <input type="text" pInputText [(ngModel)]="ruledescription" placeholder="Rule Description" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="ruledescription" />
+                        <label for="ruledescription">Rule Description</label>
+                    </p-floatLabel>
                 </div>
             </div>
             <div class="field-set-sux">
-                <p-multiSelect [options]="rulemapping" [(ngModel)]="selectedMapping" optionLabel="dropName" placeholder="Select Rule Mapping" />
+                <p-floatLabel>
+                    <p-multiSelect [options]="rulemapping" [(ngModel)]="selectedMapping" optionLabel="dropName" />
+                    <label for="selectedMapping">Select Rule Mapping</label>
+                </p-floatLabel>
             </div>
             <div class="field-set-sub">
                 <div class="conditions">
-                    <input type="text" pInputText [(ngModel)]="dpddays" placeholder="DPD Days" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="dpddays" />
+                        <label for="dpddays">DPD Days</label>
+                    </p-floatLabel>
                 </div>
                 <div class="conditions">
-                    <input type="text" pInputText [(ngModel)]="activeloans" placeholder="Active Loans" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="activeloans" />
+                        <label for="activeloans">Active Loans</label>
+                    </p-floatLabel>
                 </div>
                 <div class="conditions">
-                    <input type="text" pInputText [(ngModel)]="outstandingamount" placeholder="Outstanding Amount" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="outstandingamount" />
+                        <label for="outstandingamount">Outstanding Amount</label>
+                    </p-floatLabel>
                 </div>
                 <div class="conditions">
-                    <input type="text" pInputText [(ngModel)]="jlgactiveloans" placeholder="Active JLG Loans" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="jlgactiveloans" />
+                        <label for="jlgactiveloans">JLG Active Loans</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="field-set-sub-buttons">
+                <div>
+                    <p-button label="Submit" />
+                </div>
+                <div>
+                    <p-button label="View" />
                 </div>
             </div>
         </div>

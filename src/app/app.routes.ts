@@ -10,6 +10,7 @@ import { DevicewhitelistingComponent } from './components/adminportal/devicewhit
 import { ReportsComponent } from './components/adminportal/reports/reports.component';
 import { ProductComponent } from './components/adminportal/product/product.component';
 import { RuleengineComponent } from './components/adminportal/ruleengine/ruleengine.component';
+import { AuthpendingComponent } from './components/adminportal/authpending/authpending.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -23,7 +24,8 @@ export const routes: Routes = [
             {path:'devicewhitelisting',component:DevicewhitelistingComponent},
             {path:'reports',component:ReportsComponent},
             {path:'product',component:ProductComponent},
-            {path:'ruleengine',component:RuleengineComponent}
+            {path:'ruleengine',component:RuleengineComponent},
+            {path:'authpending',component:AuthpendingComponent}
         ]
     }
 ];
