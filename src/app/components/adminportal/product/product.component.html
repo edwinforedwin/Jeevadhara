@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            Product Configuration
+        </div>
+        <div class="field-class">
+            <div class="field-sets">
+                <div class="fields-one">
+                    <input type="text" pInputText [(ngModel)]="name" placeholder="Product Name" />
+                </div>
+                <div class="fields-one">
+                    <input type="text" pInputText [(ngModel)]="description" placeholder="Product Description" />
+                </div>
+            </div>
+            <div class="field-sets">
+                <div class="fields-two">
+                    <input type="text" pInputText [(ngModel)]="schemecode" placeholder="Scheme Code" />
+                </div>
+                <div class="fields-two">
+                    <input type="text" pInputText [(ngModel)]="subheadcode" placeholder="Subhead Code" />
+                </div>
+                <div class="fields-two">
+                    <input type="text" pInputText [(ngModel)]="inttablecode" placeholder="Intrest Table Code" />
+                </div>
+            </div>
+            <div class="field-sets">
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="minloanamount" placeholder="Min Loan Value" />
+                </div>
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="maxloanamount" placeholder="Max Loan Value" />
+                </div>
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="mininterest" placeholder="Min Interest" />
+                </div>
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="maxinterest" placeholder="Max Interest" />
+                </div>
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="mintenure" placeholder="Min Tenure" />
+                </div>
+                <div class="fields-three">
+                    <input type="text" pInputText [(ngModel)]="maxtenure" placeholder="Max Tenure" />
+                </div>
+            </div>
+            <div class="field-sets">
+                <div class="fields-one">
+                    <p-dropdown [options]="mapping" [(ngModel)]="selectedMapping" optionLabel="dropName" placeholder="Select Product Mapping" />
+                </div>
+                <div class="field-four">
+                    <p-button label="Submit" />
+                </div>
+                <div class="field-four">
+                    <p-button label="View" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            Products offered to customers can be configured here with necessary details such as loan amound, scheme code, etc.
+        </p-card>
+    </div>
+</div>
