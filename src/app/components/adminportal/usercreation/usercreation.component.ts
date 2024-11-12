@@ -6,7 +6,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
-interface dropLists {
+export interface dropLists {
   dropid: number,
   dropName: string
 }

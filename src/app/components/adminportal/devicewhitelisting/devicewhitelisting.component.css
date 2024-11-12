@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card {
+    width: 30%;
+}
+::ng-deep .p-dropdown {
+    width: 100%;
+}
+::ng-deep .p-inputtext {
+    width: 100%;
+}
+::ng-deep .p-card-content {
+    text-align: justify;
+}
+::ng-deep .p-button {
+    width: 100%;
+    background: rgb(19,82,87);
+    border: 0;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
+}
+.main-fields {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.sub-fields {
+    width: 50%;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.upload {
+    width: 50%;
+}
+.buttons {
+    width: 25%;
+}

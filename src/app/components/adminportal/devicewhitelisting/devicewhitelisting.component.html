@@ -1,1 +1,33 @@
-<p>devicewhitelisting works!</p>
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            Biometric Device Whitelisting
+        </div>
+        <div class="fields">
+            <div class="main-fields">
+                <div class="sub-fields">
+                    <p-dropdown  [options]="devices" [(ngModel)]="selectedDevice" optionLabel="dropName" placeholder="Select Device Type" />
+                </div>
+                <div class="sub-fields">
+                    <input type="text" pInputText [(ngModel)]="serialNumber" placeholder="Device Serial Number" />
+                </div>
+            </div>
+            <div class="main-fields">
+                <div class="upload">
+                    <p-fileUpload mode="basic" chooseLabel="Upload bulk device file" chooseIcon="pi pi-upload" name="demo[]" accept="csv/*" maxFileSize="1000000"  />
+                </div>
+                <div class="buttons">
+                    <p-button label="Submit" />
+                </div>
+                <div class="buttons">
+                    <p-button label="View" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <p-card header="Know Your Menu">
+            As we are using biometric eKYC for customer onboarding, devices used for the same should be whitelisted at bank side. This menu can be utilized for the same
+        </p-card>
+    </div>
+</div>
