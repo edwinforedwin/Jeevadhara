@@ -6,13 +6,17 @@
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     width: 70%;
 }
 .fields {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+::ng-deep .p-dropdown-items {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
 }
 .card {
     width: 30%;
@@ -62,4 +66,7 @@
 }
 .buttons {
     width: 25%;
+}
+label {
+    font-size: 12px;
 }

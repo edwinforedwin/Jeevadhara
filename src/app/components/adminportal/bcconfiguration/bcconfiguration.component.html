@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            BC Configuration
+        </div>
+        <div class="field-set">
+            <div class="field-set-one">
+                <div class="bcname">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcname" />
+                        <label for="bcname">BC Name</label>
+                    </p-floatLabel>
+                </div>
+                <div class="bcaddress">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcaddress" />
+                        <label for="bcaddress">BC Address</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="field-set-one">
+                <div class="fields">
+                    <p-floatLabel>
+                        <p-dropdown [options]="states" [(ngModel)]="selectedstate" optionLabel="dropName" />
+                        <label for="selectedstate">Select State</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <p-dropdown [options]="districts" [(ngModel)]="selecteddistrict" optionLabel="dropName" />
+                        <label for="selecteddistrict">Select District</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <p-dropdown [options]="cities" [(ngModel)]="selectedcity" optionLabel="dropName" />
+                        <label for="selectedcity">Select City</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="field-set-one">
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcemail" />
+                        <label for="bcemail">BC Email</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcpan" />
+                        <label for="bcpan">BC PAN No</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcgst" />
+                        <label for="bcgst">BC GST No</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="field-set-one">
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcauthname" />
+                        <label for="bcauthname">BC Authorized Name</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcauthpan" />
+                        <label for="bcauthpan">Authorized PAN No</label>
+                    </p-floatLabel>
+                </div>
+                <div class="fields">
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="bcauthdesignation" />
+                        <label for="bcauthdesignation">Authorized Designation</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="buttons">
+                <div>
+                    <p-button label="Submit" />
+                </div>
+                <div>
+                    <p-button label="View" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            BC partners can be onboarded to the application using this menu.
+        </p-card>
+    </div>
+</div>

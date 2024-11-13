@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            BC Branch Management
+        </div>
+        <div class="field-set">
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchname" />
+                    <label for="bcbranchname">Branch Name</label>
+                </p-floatLabel>
+            </div>
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchaddress" />
+                    <label for="bcbranchaddress">Branch Address</label>
+                </p-floatLabel>
+            </div>
+            <div class="fields">
+                <p-floatLabel>
+                    <p-dropdown [options]="bclist" optionLabel="dropName" [(ngModel)]="selectedbc" />
+                    <label for="selectedbc">BC Partner</label>
+                </p-floatLabel>
+            </div>
+        </div>
+        <div class="field-set">
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchphone" />
+                    <label for="bcbranchphone">Branch Contact No</label>
+                </p-floatLabel>
+            </div>
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchemail" />
+                    <label for="bcbranchemail">Branch Email</label>
+                </p-floatLabel>
+            </div>
+        </div>
+        <div class="field-set">
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchlatitude" />
+                    <label for="bcbranchlatitude">Location Latitude</label>
+                </p-floatLabel>
+            </div>
+            <div class="fields">
+                <p-floatLabel>
+                    <input type="text" pInputText [(ngModel)]="bcbranchlongitude" />
+                    <label for="bcbranchlongitude">Location Longitude</label>
+                </p-floatLabel>
+            </div>
+            <div class="fields">
+                <p-floatLabel>
+                    <p-dropdown [options]="bcmanagers" optionLabel="dropName" [(ngModel)]="selectedbcmanager" />
+                    <label for="selectedbcmanager">Branch Manager</label>
+                </p-floatLabel>
+            </div>
+        </div>
+        <div class="field-set-buttons">
+            <div>
+                <p-button label="Submit" />
+            </div>
+            <div>
+                <p-button label="View" />
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            BC will be forming branches across the nation for business purposes. All those branches should be created and maintained here.
+        </p-card>
+    </div>
+</div>

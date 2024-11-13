@@ -6,10 +6,16 @@
         <div class="fields">
             <div class="main-fields">
                 <div class="sub-fields">
-                    <p-dropdown  [options]="devices" [(ngModel)]="selectedDevice" optionLabel="dropName" placeholder="Select Device Type" />
+                    <p-floatLabel>
+                        <p-dropdown  [options]="devices" [(ngModel)]="selectedDevice" optionLabel="dropName" />
+                        <label for="selectedDevice">Select Device Type</label>
+                    </p-floatLabel>
                 </div>
                 <div class="sub-fields">
-                    <input type="text" pInputText [(ngModel)]="serialNumber" placeholder="Device Serial Number" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="serialNumber" />
+                        <label for="serialNumber">Device Serial Number</label>
+                    </p-floatLabel>
                 </div>
             </div>
             <div class="main-fields">

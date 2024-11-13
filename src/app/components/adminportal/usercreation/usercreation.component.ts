@@ -5,6 +5,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 export interface dropLists {
   dropid: number,
@@ -14,7 +15,7 @@ export interface dropLists {
 @Component({
   selector: 'app-usercreation',
   standalone: true,
-  imports: [InputTextModule,FormsModule,DropdownModule,CalendarModule,CardModule,ButtonModule],
+  imports: [InputTextModule,FormsModule,DropdownModule,CalendarModule,CardModule,ButtonModule,FloatLabelModule],
   templateUrl: './usercreation.component.html',
   styleUrl: './usercreation.component.css'
 })

@@ -6,11 +6,12 @@ import { dropLists } from '../usercreation/usercreation.component'
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { FileUploadModule } from 'primeng/fileupload';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'app-devicewhitelisting',
   standalone: true,
-  imports: [InputTextModule,ButtonModule,DropdownModule,FormsModule,CardModule,FileUploadModule],
+  imports: [InputTextModule,ButtonModule,DropdownModule,FormsModule,CardModule,FileUploadModule,FloatLabelModule],
   templateUrl: './devicewhitelisting.component.html',
   styleUrl: './devicewhitelisting.component.css'
 })

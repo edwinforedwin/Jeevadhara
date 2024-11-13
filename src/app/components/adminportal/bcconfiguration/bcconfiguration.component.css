@@ -1,13 +1,13 @@
 .container {
     display: flex;
-    gap: 50px;
     width: 100%;
+    gap: 50px;
 }
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     width: 70%;
+    gap: 30px;
 }
 .help {
     width: 30%;
@@ -17,64 +17,59 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
-#name {
-    width: 370px;
-}
-#mobileno {
-    width: 370px;
-}
-#address {
-    width: 750px;
-}
-#email {
-    width: 240px;
-}
 ::ng-deep .p-inputtext {
+    width: 100%;
     font-family: 'Trebuchet MS';
-    height: 40px;
     font-size: 12px;
 }
-.fields {
+.field-set {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-::ng-deep .p-dropdown {
-    width: 240px;
+.field-set-one {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.bcname {
+    width: 40%;
+}
+.bcaddress {
+    width: 60%;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
     font-family: 'Trebuchet MS';
+}
+::ng-deep .p-card-content {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+    text-align: justify;
+}
+::ng-deep .p-dropdown {
+    width: 100%;
 }
 ::ng-deep .p-dropdown-items {
     font-family: 'Trebuchet MS';
     font-size: 12px;
 }
-::ng-deep .p-calendar {
-    width: 240px;
-}
-.field-group {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-}
-.mainSections {
-    display: flex;
-    gap: 30px;
-}
-::ng-deep .p-card {
-    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
-    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
-}
-::ng-deep .p-card-content {
-    font-size: 12px;
-    font-family: 'Trebuchet MS';
-    text-align: justify;
-}
-::ng-deep .p-button {
-    background: rgb(19,82,87);
-    width: 114px;
-    border: 0;
-    font-family: 'Trebuchet MS';
+.fields {
+    width: 100%;
 }
 label {
-    font-family: 'Trebuchet MS';
     font-size: 12px;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+::ng-deep .p-button {
+    width: 100px;
+    font-family: 'Trebuchet MS';
+    background: rgb(19,82,87);
+    border: 0;
 }

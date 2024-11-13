@@ -11,6 +11,8 @@ import { ReportsComponent } from './components/adminportal/reports/reports.compo
 import { ProductComponent } from './components/adminportal/product/product.component';
 import { RuleengineComponent } from './components/adminportal/ruleengine/ruleengine.component';
 import { AuthpendingComponent } from './components/adminportal/authpending/authpending.component';
+import { BcconfigurationComponent } from './components/adminportal/bcconfiguration/bcconfiguration.component';
+import { BcbranchconfigurationComponent } from './components/adminportal/bcbranchconfiguration/bcbranchconfiguration.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -25,7 +27,9 @@ export const routes: Routes = [
             {path:'reports',component:ReportsComponent},
             {path:'product',component:ProductComponent},
             {path:'ruleengine',component:RuleengineComponent},
-            {path:'authpending',component:AuthpendingComponent}
+            {path:'authpending',component:AuthpendingComponent},
+            {path:'bcconfiguration',component:BcconfigurationComponent},
+            {path:'bcbranchconfiguration',component:BcbranchconfigurationComponent}
         ]
     }
 ];

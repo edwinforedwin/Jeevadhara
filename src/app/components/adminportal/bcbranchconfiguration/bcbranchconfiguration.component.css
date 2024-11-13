@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 30px;
+}
+.help {
+    width: 30%;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
+    font-family: 'Trebuchet MS';
+}
+::ng-deep .p-card-content {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.field-set {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.fields {
+    width: 100%;
+}
+::ng-deep .p-inputtext {
+    width: 100%;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+::ng-deep .p-dropdown {
+    width: 100%;
+}
+::ng-deep .p-dropdown-items {
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+label {
+    font-size: 12px;
+}
+.field-set-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+::ng-deep .p-button {
+    width: 100px;
+    font-family: 'Trebuchet MS';
+    background: rgb(19,82,87);
+    border: 0;
+}

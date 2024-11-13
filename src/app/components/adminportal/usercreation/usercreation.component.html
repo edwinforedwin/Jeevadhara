@@ -1,64 +1,92 @@
 <div class="container">
-    <div>
+    <div class="menu">
         <div class="title">
             User Creation
         </div>
-    </div>
-    <div class="mainSections">
-        <div class="fields">
-            <div class="field-group">
-                <div>
-                    <input type="text" pInputText [(ngModel)]="name" placeholder="Full Name" id="name" />
+        <div class="mainSections">
+            <div class="fields">
+                <div class="field-group">
+                    <div>
+                        <p-floatLabel>
+                            <input type="text" pInputText [(ngModel)]="name" id="name" />
+                            <label for="name">Full Name</label>
+                        </p-floatLabel>
+                    </div>
+                    <div>
+                        <p-floatLabel>
+                            <input type="text" pInputText [(ngModel)]="mobileno" id="mobileno" />
+                            <label for="mobileno">Mobile Number</label>
+                        </p-floatLabel>
+                    </div>
                 </div>
                 <div>
-                    <input type="text" pInputText [(ngModel)]="mobileno" placeholder="Mobile Number" id="mobileno" />
-                </div>
-            </div>
-            <div>
-                <input type="text" pInputText [(ngModel)]="address" placeholder="Address" id="address" />
-            </div>
-            <div class="field-group">
-                <div>
-                    <p-dropdown [options]="portals" [(ngModel)]="selectedPortal" optionLabel="dropName" placeholder="Select Portal Access" />
-                </div>
-                <div>
-                    <p-calendar [(ngModel)]="timeFrom" [timeOnly]="true" placeholder="From Time" />
-                </div>
-                <div>
-                    <p-calendar [(ngModel)]="timeTo" [timeOnly]="true" placeholder="To Time" />
-                </div>
-            </div>
-            <div class="field-group">
-                <div>
-                    <p-dropdown [options]="serviceProvides" [(ngModel)]="selectedSP" optionLabel="dropName" placeholder="Select SP" />
-                </div>
-                <div>
-                    <p-dropdown [options]="serviceProvidesBranches" [(ngModel)]="selectedSPB" optionLabel="dropName" placeholder="Select SP Branch" />
-                </div>
-                <div>
-                    <input type="text" pInputText [(ngModel)]="email" placeholder="Email" id="email" />          
-                </div>
-            </div>
-            <div class="field-group">
-                <div>
-                    <p-dropdown [options]="userTypes" [(ngModel)]="selectedUT" optionLabel="dropName" placeholder="Select User Type" />
+                    <p-floatLabel>
+                        <input type="text" pInputText [(ngModel)]="address" id="address" />
+                        <label for="address">Address</label>
+                    </p-floatLabel>
                 </div>
                 <div class="field-group">
                     <div>
-                        <p-button label="Submit" />
+                        <p-floatLabel>
+                            <p-dropdown [options]="portals" [(ngModel)]="selectedPortal" optionLabel="dropName" />
+                            <label for="selectedPortal">Select Portal Access</label>
+                        </p-floatLabel>
                     </div>
                     <div>
-                        <p-button label="View" />
+                        <p-floatLabel>
+                            <p-calendar [(ngModel)]="timeFrom" [timeOnly]="true" />
+                            <label for="timeFrom">From Time</label>
+                        </p-floatLabel>
+                    </div>
+                    <div>
+                        <p-floatLabel>
+                            <p-calendar [(ngModel)]="timeTo" [timeOnly]="true" />
+                            <label for="timeTo">To Time</label>
+                        </p-floatLabel>
                     </div>
                 </div>
+                <div class="field-group">
+                    <div>
+                        <p-floatLabel>
+                            <p-dropdown [options]="serviceProvides" [(ngModel)]="selectedSP" optionLabel="dropName" />
+                            <label for="selectedSP">Select SP</label>
+                        </p-floatLabel>
+                    </div>
+                    <div>
+                        <p-floatLabel>
+                            <p-dropdown [options]="serviceProvidesBranches" [(ngModel)]="selectedSPB" optionLabel="dropName" />
+                            <label for="selectedSPB">Select SP Branch</label>
+                        </p-floatLabel>
+                    </div>
+                    <div>
+                        <p-floatLabel>
+                            <input type="text" pInputText [(ngModel)]="email" id="email" />
+                            <label for="email">Email</label>
+                        </p-floatLabel>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div>
+                        <p-floatLabel>
+                            <p-dropdown [options]="userTypes" [(ngModel)]="selectedUT" optionLabel="dropName" />
+                            <label for="selectedUT">Select User Type</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="field-group">
+                        <div>
+                            <p-button label="Submit" />
+                        </div>
+                        <div>
+                            <p-button label="View" />
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
-        <div>
-            <p-card header="Know Your Menu">
-                As the application serves both bank and custom users, each user should be created in the application using this menu.
-                <br /><br />
-                Bank users can use their AD credentials after user creation for logging into the portals.
-            </p-card>
-        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            All users who consuming the portals should be created and maintained here.
+        </p-card>
     </div>
 </div>

@@ -19,6 +19,8 @@ export class UserhomeComponentAdmin implements OnInit {
   ngOnInit() {
     this.items = [
         { label: 'Home', icon: 'pi pi-home',routerLink:'dashboard'},
+        { label: 'BC Configuration',icon:'pi pi-building-columns',routerLink:'bcconfiguration'},
+        { label: 'BC Branch',icon:'pi pi-building',routerLink:'bcbranchconfiguration'},
         { label: 'Product Configuration', icon: 'pi pi-compass',routerLink:'product'},
         { label: 'User Groups', icon: 'pi pi-users',routerLink:'usergroup'},
         { label: 'Users', icon: 'pi pi-user',routerLink:'usercreation'},
