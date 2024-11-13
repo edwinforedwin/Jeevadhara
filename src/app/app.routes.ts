@@ -13,10 +13,23 @@ import { RuleengineComponent } from './components/adminportal/ruleengine/ruleeng
 import { AuthpendingComponent } from './components/adminportal/authpending/authpending.component';
 import { BcconfigurationComponent } from './components/adminportal/bcconfiguration/bcconfiguration.component';
 import { BcbranchconfigurationComponent } from './components/adminportal/bcbranchconfiguration/bcbranchconfiguration.component';
+import { LoandashboardComponent } from './components/loanportal/loandashboard/loandashboard.component';
+import { QcverificationComponent } from './components/loanportal/qcverification/qcverification.component';
+import { LoansanctionComponent } from './components/loanportal/loansanction/loansanction.component';
+import { CustomerdataupdationComponent } from './components/loanportal/customerdataupdation/customerdataupdation.component';
+import { LoanreportsComponent } from './components/loanportal/loanreports/loanreports.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
-    {path:'jeevadhara/loanportal/userhome',component:UserhomeComponentLoan},
+    {path:'jeevadhara/loanportal/userhome',component:UserhomeComponentLoan,
+        children:[
+            {path:'dashboard',component:LoandashboardComponent},
+            {path:'qcverification',component:QcverificationComponent},
+            {path:'loansanction',component:LoansanctionComponent},
+            {path:'customerdataupdation',component:CustomerdataupdationComponent},
+            {path:'reports',component:LoanreportsComponent}
+        ]
+    },
     {path:'jeevadhara/adminportal/login',component:LoginComponentAdmin},
     {path:'jeevadhara/adminportal/userhome',component:UserhomeComponentAdmin,
         children:[

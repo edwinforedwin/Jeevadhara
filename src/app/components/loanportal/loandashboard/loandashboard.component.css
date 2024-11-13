@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.card-items {
+    width: 100%;
+}
+::ng-deep .p-card {
+    box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
+    background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
+    width: 100%;
+    text-align: center;
+    height: 120px;
+    font-family: 'Trebuchet MS';
+}
+::ng-deep .p-card-content {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS';
+}
