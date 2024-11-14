@@ -18,6 +18,7 @@ import { QcverificationComponent } from './components/loanportal/qcverification/
 import { LoansanctionComponent } from './components/loanportal/loansanction/loansanction.component';
 import { CustomerdataupdationComponent } from './components/loanportal/customerdataupdation/customerdataupdation.component';
 import { LoanreportsComponent } from './components/loanportal/loanreports/loanreports.component';
+import { EsignexecutionComponent } from './components/loanportal/esignexecution/esignexecution.component';
 
 export const routes: Routes = [
     {path:'jeevadhara/loanportal/login',component:LoginComponentLoan},
@@ -27,7 +28,8 @@ export const routes: Routes = [
             {path:'qcverification',component:QcverificationComponent},
             {path:'loansanction',component:LoansanctionComponent},
             {path:'customerdataupdation',component:CustomerdataupdationComponent},
-            {path:'reports',component:LoanreportsComponent}
+            {path:'reports',component:LoanreportsComponent},
+            {path:'esignexecution',component:EsignexecutionComponent}
         ]
     },
     {path:'jeevadhara/adminportal/login',component:LoginComponentAdmin},

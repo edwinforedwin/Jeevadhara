@@ -1,1 +1,20 @@
-<p>loanreports works!</p>
+<div class="container">
+    <div class="menu">
+        <div class="title">
+            Reports
+        </div>
+        <div class="field-set">
+            <div class="fields">
+                <p-floatLabel>
+                    <p-dropdown [options]="reports" optionLabel="dropName" [(ngModel)]="selectedreport" />
+                    <label for="selectedreport">Select Report</label>
+                </p-floatLabel>
+            </div>
+        </div>
+    </div>
+    <div class="help">
+        <p-card header="Know Your Menu">
+            All reports releated to loan applications and customers will be available here.
+        </p-card>
+    </div>
+</div>

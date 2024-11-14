@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
@@ -7,10 +7,16 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { ServiceService } from '../../../services/adminportal/service.service';
 
 interface dropLists {
   dropid: number,
   dropname: string
+}
+interface apiResponse {
+  response: string,
+  response_code: string,
+  menu_details: []
 }
 
 @Component({
@@ -20,7 +26,7 @@ interface dropLists {
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })
-export class UsergroupComponent {
+export class UsergroupComponent implements OnInit {
   name: string = ''
   description: string = ''
   dashboards: dropLists[] = [
@@ -28,17 +34,27 @@ export class UsergroupComponent {
     {dropid:2,dropname:'Admin Dashboard'}
   ]
   selectedDashboard: dropLists[] = []
-  menuList: dropLists[] = [
-    {dropid:1,dropname:"User Creation"},
-    {dropid:2,dropname:"User Modification"},
-    {dropid:3,dropname:"Reports"},
-    {dropid:4,dropname:"BRE Configuration"},
-    {dropid:5,dropname:"Product Management"},
-    {dropid:6,dropname:"Device Whitelisting"}
-  ]
+  menuList: apiResponse = {response:'',response_code:'',menu_details:[]}
+  menuValues:dropLists[]=[]
   portalList: dropLists[] = [
     {dropid:1,dropname:"Sourcing Portal"},
     {dropid:2,dropname:"Loan Portal"},
     {dropid:3,dropname:"Admin Portal"}
   ]
+
+  constructor(private services:ServiceService) {}
+
+  ngOnInit(){
+    let apiResp = this.services.getMenus()
+    apiResp.subscribe((resp:any)=>{
+      this.menuList = resp
+      if (this.menuList.response === 'success') {
+        for (let index = 0; index < this.menuList.menu_details.length; index++) {
+          const element = JSON.parse(this.menuList.menu_details[index])
+          this.menuValues.push({dropid:element.menu_id,dropname:element.menu_name})
+        }
+      }
+    })
+    console.log(this.menuValues)
+  }
 }

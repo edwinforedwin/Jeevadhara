@@ -20,6 +20,7 @@ export class UserhomeComponentLoan implements OnInit {
             { label: 'Home', icon: 'pi pi-home',routerLink:'dashboard' },
             { label: 'QC Verification', icon: 'pi pi-search',routerLink:'qcverification'  },
             { label: 'Loan Sanction', icon: 'pi pi-check-square',routerLink:'loansanction' },
+            { label: 'eSign Execution', icon: 'pi pi-pen-to-square',routerLink:'esignexecution' },
             { label: 'Customer Data Updation', icon: 'pi pi-pencil',routerLink:'customerdataupdation' },
             { label: 'Reports', icon: 'pi pi-book',routerLink:'reports' }
 

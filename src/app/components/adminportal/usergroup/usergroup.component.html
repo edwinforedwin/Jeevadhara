@@ -38,7 +38,7 @@
                     <div class="fieldset">
                         <p-fieldset legend="Menu Privileges">
                             <div class="menu-list">
-                            @for (item of menuList; track $index) {
+                            @for (item of menuValues; track $index) {
                                 <p-checkbox [label]="item.dropname" [binary]="true"></p-checkbox>
                             }
                             </div>

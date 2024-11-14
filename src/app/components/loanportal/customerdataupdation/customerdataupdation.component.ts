@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-customerdataupdation',
   standalone: true,
-  imports: [],
+  imports: [CardModule],
   templateUrl: './customerdataupdation.component.html',
   styleUrl: './customerdataupdation.component.css'
 })
