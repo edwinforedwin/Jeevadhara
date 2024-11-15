@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ContentChildren, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
@@ -26,7 +26,7 @@ interface apiResponse {
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })
-export class UsergroupComponent implements OnInit {
+export class UsergroupComponent implements OnChanges {
   name: string = ''
   description: string = ''
   dashboards: dropLists[] = [
@@ -44,17 +44,24 @@ export class UsergroupComponent implements OnInit {
 
   constructor(private services:ServiceService) {}
 
-  ngOnInit(){
+  getMenuList() {
     let apiResp = this.services.getMenus()
     apiResp.subscribe((resp:any)=>{
       this.menuList = resp
       if (this.menuList.response === 'success') {
-        for (let index = 0; index < this.menuList.menu_details.length; index++) {
-          const element = JSON.parse(this.menuList.menu_details[index])
-          this.menuValues.push({dropid:element.menu_id,dropname:element.menu_name})
+        let apiresponse = JSON.stringify(this.menuList)
+        let apiresponsefinal = JSON.parse(apiresponse)
+        for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
+          const element = apiresponsefinal.ug_details[index];
+          let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
+          this.menuValues.push(menuitem)
         }
       }
     })
-    console.log(this.menuValues)
   }
+  ngOnChanges() {
+    this.getMenuList()
+  }
+  
+
 }

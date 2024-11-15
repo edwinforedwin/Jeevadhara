@@ -10,7 +10,6 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   getMenus():Observable<any>{
-    let apiResp = this.http.get('http://localhost:234/jeevadhara/api/v1/getmenus',{headers:{'auth_value':secret.auth_value}})
-    return apiResp
+    return this.http.get('http://localhost:234/jeevadhara/api/v1/getmenus',{headers:{'auth_value':secret.auth_value}})
   }
 }
