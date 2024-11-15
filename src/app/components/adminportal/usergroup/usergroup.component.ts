@@ -26,7 +26,7 @@ interface apiResponse {
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })
-export class UsergroupComponent implements OnChanges {
+export class UsergroupComponent implements OnInit {
   name: string = ''
   description: string = ''
   dashboards: dropLists[] = [
@@ -59,7 +59,7 @@ export class UsergroupComponent implements OnChanges {
       }
     })
   }
-  ngOnChanges() {
+  ngOnInit() {
     this.getMenuList()
   }
   

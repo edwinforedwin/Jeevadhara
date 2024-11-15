@@ -4,6 +4,44 @@
             QC Verification
         </div>
         <div class="field-set">
+            <div class="fields">
+                <div class="sub-fields">
+                    <p-floatLabel>
+                        <p-dropdown [options]="bcentities" [(ngModel)]="selectedbc" optionLabel="dropName" />
+                        <label for="selectedbc">Select BC</label>
+                    </p-floatLabel>
+                </div>
+                <div class="sub-fields">
+                    <p-floatLabel>
+                        <p-dropdown [options]="bcbranches" [(ngModel)]="selectedbranch" optionLabel="dropName" />
+                        <label for="selectedbc">Select BC Branch</label>
+                    </p-floatLabel>
+                </div>
+            </div>
+            <div class="fields-button">
+                <div class="sub-fields-button">
+                    <p-button label="Search" />
+                </div>
+            </div>
+        </div>
+        <div class="cases">
+            @for (item of applications; track $index) {
+            <div class="case">
+                <div class="case-detail">
+                    <div>
+                        <i class="pi pi-file-o" style="font-size: 2.5rem"></i>
+                    </div>
+                    <div class="case-details">
+                        <div class="case-details-font">Aiswariya R - 2011114178</div>
+                        <div class="case-details-font">Loan Amount: 125000</div>
+                        <div class="case-details-font">Application Submitted On: 2024-11-15</div>
+                    </div>
+                </div>
+                <div>
+                    <p-button label="View" />
+                </div>
+            </div>
+        }
         </div>
     </div>
     <div class="help">

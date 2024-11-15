@@ -17,6 +17,20 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+.field-set {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.fields {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.sub-fields {
+    width: 100%;
+}
 ::ng-deep .p-card {
     box-shadow: 10px 10px 10px rgba(153, 126, 126, 0.5), 0 6px 20px 0 rgba(107, 107, 107, 0.19);
     background: linear-gradient(90deg, rgb(136, 211, 216) 0%, rgb(175, 222, 191) 80%);
@@ -26,4 +40,69 @@
     font-family: 'Trebuchet MS';
     font-size: 12px;
     text-align: justify;
+}
+::ng-deep .p-dropdown {
+    width: 100%;
+}
+::ng-deep .p-inputtext {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+::ng-deep .p-dropdown-items {
+    font-size: 12px;
+    font-family: 'Trebuchet MS'
+}
+label {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+.fields-button {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+}
+.sub-fields-button {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+::ng-deep .p-button {
+    width: 100px;
+    font-family: 'Trebuchet MS';
+    background: rgb(19,82,87);
+    border: 0;
+}
+.cases {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+.case {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.case-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.case-details-font {
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+.case-detail {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 8px;
 }
