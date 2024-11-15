@@ -29,6 +29,8 @@ export class QcverificationComponent {
   applications:dropLists[]=[
     {dropid:18791411,dropName:'Sebi Joseph'},
     {dropid:28745148,dropName:'Aiswariya R'},
-    {dropid:18941811,dropName:'Akhila A S'}
+    {dropid:18941811,dropName:'Akhila A S'},
+    {dropid:28745148,dropName:'Aiswariya R'},
+    {dropid:28745148,dropName:'Aiswariya R'},
   ]
 }
