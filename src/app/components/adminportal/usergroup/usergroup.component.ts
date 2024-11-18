@@ -27,7 +27,7 @@ interface apiResponse {
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })
-export class UsergroupComponent implements OnInit {
+export class UsergroupComponent {
   name: string = ''
   description: string = ''
   dashboards: dropLists[] = [
@@ -43,17 +43,26 @@ export class UsergroupComponent implements OnInit {
     {dropid:3,dropname:"Admin Portal"}
   ]
 
-  constructor(private services:ServiceService) {
-    const menuLists = this.services.getMenus().pipe(map((resp)=>{
+  constructor(public services:ServiceService) {
+    let menuLists = this.services.getMenus().pipe(map((resp:any)=>{
       return resp.ug_details.map((item:any)=>({
         dropid:item.menu_id,dropname:item.menu_name
       }))
     }))
-    
-    console.log(menuLists)
+    let apiResp = this.services.getMenus()
+    apiResp.subscribe((resp:any)=>{
+      this.menuList = resp
+      if (this.menuList.response === 'success') {
+        let apiresponse = JSON.stringify(this.menuList)
+        let apiresponsefinal = JSON.parse(apiresponse)
+        for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
+          const element = apiresponsefinal.ug_details[index];
+          let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
+          this.menuValues.push(menuitem)
+        }
+      }
+    })
   }
-  
-
   
   getMenuList() {
     let apiResp = this.services.getMenus()
@@ -70,9 +79,5 @@ export class UsergroupComponent implements OnInit {
       }
     })
   }
-  ngOnInit() {
-    this.getMenuList()
-  }
-  
 
 }
