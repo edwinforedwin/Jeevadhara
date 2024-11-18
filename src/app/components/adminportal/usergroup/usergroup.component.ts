@@ -8,6 +8,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { ServiceService } from '../../../services/adminportal/service.service';
+import { map } from 'rxjs';
 
 interface dropLists {
   dropid: number,
@@ -42,8 +43,18 @@ export class UsergroupComponent implements OnInit {
     {dropid:3,dropname:"Admin Portal"}
   ]
 
-  constructor(private services:ServiceService) {}
+  constructor(private services:ServiceService) {
+    const menuLists = this.services.getMenus().pipe(map((resp)=>{
+      return resp.ug_details.map((item:any)=>({
+        dropid:item.menu_id,dropname:item.menu_name
+      }))
+    }))
+    
+    console.log(menuLists)
+  }
+  
 
+  
   getMenuList() {
     let apiResp = this.services.getMenus()
     apiResp.subscribe((resp:any)=>{
