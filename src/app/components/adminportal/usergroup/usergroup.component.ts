@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ContentChildren, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { ServiceService } from '../../../services/adminportal/service.service';
 import { map } from 'rxjs';
+import { CommonModule } from '@angular/common'
 
 interface dropLists {
   dropid: number,
@@ -23,7 +24,7 @@ interface apiResponse {
 @Component({
   selector: 'app-usergroup',
   standalone: true,
-  imports: [InputTextModule,FormsModule,CardModule,DropdownModule,FieldsetModule,CheckboxModule,ButtonModule,FloatLabelModule],
+  imports: [InputTextModule,FormsModule,CardModule,DropdownModule,FieldsetModule,CheckboxModule,ButtonModule,FloatLabelModule,CommonModule],
   templateUrl: './usergroup.component.html',
   styleUrl: './usergroup.component.css'
 })
@@ -35,49 +36,34 @@ export class UsergroupComponent {
     {dropid:2,dropname:'Admin Dashboard'}
   ]
   selectedDashboard: dropLists[] = []
-  menuList: apiResponse = {response:'',response_code:'',menu_details:[]}
-  menuValues:dropLists[]=[]
   portalList: dropLists[] = [
     {dropid:1,dropname:"Sourcing Portal"},
     {dropid:2,dropname:"Loan Portal"},
     {dropid:3,dropname:"Admin Portal"}
   ]
 
-  constructor(public services:ServiceService) {
-    let menuLists = this.services.getMenus().pipe(map((resp:any)=>{
-      return resp.ug_details.map((item:any)=>({
-        dropid:item.menu_id,dropname:item.menu_name
-      }))
+  //constructor(public services:ServiceService) {}
+  public ugservice = inject(ServiceService)
+  public menus = this.ugservice.getMenus().pipe(map((resp:any)=>{
+    return resp.ug_details.map((item:any)=>({
+      dropid:item.menu_id,dropname:item.menu_name
     }))
-    let apiResp = this.services.getMenus()
-    apiResp.subscribe((resp:any)=>{
-      this.menuList = resp
-      if (this.menuList.response === 'success') {
-        let apiresponse = JSON.stringify(this.menuList)
-        let apiresponsefinal = JSON.parse(apiresponse)
-        for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
-          const element = apiresponsefinal.ug_details[index];
-          let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
-          this.menuValues.push(menuitem)
-        }
-      }
-    })
-  }
+  }))
   
-  getMenuList() {
-    let apiResp = this.services.getMenus()
-    apiResp.subscribe((resp:any)=>{
-      this.menuList = resp
-      if (this.menuList.response === 'success') {
-        let apiresponse = JSON.stringify(this.menuList)
-        let apiresponsefinal = JSON.parse(apiresponse)
-        for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
-          const element = apiresponsefinal.ug_details[index];
-          let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
-          this.menuValues.push(menuitem)
-        }
-      }
-    })
-  }
+  // getMenuList() {
+  //   let apiResp = this.ugservice.getMenus()
+  //   apiResp.subscribe((resp:any)=>{
+  //     this.menuList = resp
+  //     if (this.menuList.response === 'success') {
+  //       let apiresponse = JSON.stringify(this.menuList)
+  //       let apiresponsefinal = JSON.parse(apiresponse)
+  //       for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
+  //         const element = apiresponsefinal.ug_details[index];
+  //         let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
+  //         this.menuValues.push(menuitem)
+  //       }
+  //     }
+  //   })
+  // }
 
 }
