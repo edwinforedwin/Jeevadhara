@@ -1,3 +1,4 @@
+<p-toast position="bottom-right"></p-toast>
 <div class="container">
     <div class="content">
         <div class="sub-section">
@@ -46,7 +47,7 @@
                     </div>
                     <div class="buttons">
                         <div class="sub-buttons">
-                            <p-button label="Submit" />
+                            <p-button label="Submit" (onClick)="createusergroup()" [raised]="true" />
                         </div>
                         <div class="sub-buttons">
                             <p-button label="View" />
