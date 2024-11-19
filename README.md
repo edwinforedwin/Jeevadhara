@@ -1,38 +1,26 @@
-# Jeevadhara - Loan Originating System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+# Jeevadhara
 
-## Development server
+BC partnered loan origination system for banks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Authors
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [@edwinforedwin](https://github.com/edwinforedwin)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- BC Partner Configuration
+- Loan Product maintainance and mapping
+- Custom Business Rule Engine
+- Auto Sanction & eSigning
+- MIS Reports
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Tech Stack
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Client:** Angular
 
-## Further help
+**Server:** Node, Express
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-## Git commit command
-git add .
-
-git commit -m "commit command"
-
-git push -u origin main
-
-git config --global http.proxy
-
-The application will be tested at TCOE manner.
