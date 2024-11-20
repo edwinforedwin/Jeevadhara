@@ -12,7 +12,7 @@ export class ServiceService {
   getMenus():Observable<any>{
     return this.http.get('http://localhost:234/jeevadhara/api/v1/getmenus',{headers:{'auth_value':secret.auth_value}})
   }
-  createMenus(ug_name:string,ug_desc:string,ug_dashboard:string,ug_portal:string,ug_menus:string,ug_created_by:number):Observable<any>{
+  createMenus(ug_name:string,ug_desc:string,ug_dashboard:string,ug_portal:string[],ug_menus:string[],ug_created_by:number):Observable<any>{
     let payload = {
       "ug_name":ug_name,
       "ug_desc":ug_desc,

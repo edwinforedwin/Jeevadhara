@@ -1,4 +1,4 @@
-<p-toast position="bottom-right"></p-toast>
+<p-toast position="bottom-center"></p-toast>
 <div class="container">
     <div class="content">
         <div class="sub-section">
@@ -9,38 +9,38 @@
                 <div>
                     <p-floatLabel>
                         <input type="text" pInputText [(ngModel)]="name" id="name" [style]="{width:'100%'}" />
-                        <label for="name">User Group Name</label>
+                        <label for="name">User Group Name*</label>
                     </p-floatLabel>
                 </div>
                 <div class="section-two">
                     <div class="description">
                         <p-floatLabel>
                             <input type="text" pInputText [(ngModel)]="description" id="description" [style]="{width:'100%'}" />
-                            <label for="description">User Group Description</label>
+                            <label for="description">User Group Description*</label>
                         </p-floatLabel>
                     </div>
                     <div class="dashboard">
                         <p-floatLabel>
                             <p-dropdown [options]="dashboards" [(ngModel)]="selectedDashboard" optionLabel="dropname" [style]="{width:'100%'}" />
-                            <label for="selectedDashboard">Select dashbooard</label>
+                            <label for="selectedDashboard">Select dashbooard*</label>
                         </p-floatLabel>
                     </div>
                 </div>
                 <div class="section-three">
                     <div class="fieldset">
-                        <p-fieldset legend="Portals">
+                        <p-fieldset legend="Portals*">
                             <div class="menu-list">
                             @for (item of portalList; track $index) {
-                                <p-checkbox [label]="item.dropname" [binary]="true"></p-checkbox>
+                                <p-checkbox [label]="item.dropname" [value]="item.dropid" [(ngModel)]="checkedportals"></p-checkbox>
                             }
                             </div>
                         </p-fieldset>
                     </div>
                     <div class="fieldset">
-                        <p-fieldset legend="Menu Privileges">
+                        <p-fieldset legend="Menu Privileges*">
                             <div class="menu-list">
                             @for (item of menus | async; track item.dropid) {
-                                <p-checkbox [label]="item.dropname" [binary]="true"></p-checkbox>
+                                <p-checkbox [label]="item.dropname" [value]="item.dropid" [(ngModel)]="checkedmenus"></p-checkbox>
                             }
                             </div>
                         </p-fieldset>

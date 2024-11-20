@@ -40,13 +40,15 @@ export class UsergroupComponent {
     {dropid:1,dropname:'Main Dashboard'},
     {dropid:2,dropname:'Admin Dashboard'}
   ]
-  selectedDashboard: dropLists[] = []
+  selectedDashboard: dropLists = {dropid:0,dropname:''}
   portalList: dropLists[] = [
     {dropid:1,dropname:"Sourcing Portal"},
     {dropid:2,dropname:"Loan Portal"},
     {dropid:3,dropname:"Admin Portal"}
   ]
   apiresponse:apiresponse={response:'',err_msg:''}
+  checkedportals:string[]=[]
+  checkedmenus:string[]=[]
 
   public ugservice = inject(ServiceService)
   public messageservice = inject(MessageService)
@@ -58,18 +60,26 @@ export class UsergroupComponent {
   }))
 
   createusergroup(){
-    let response = this.ugservice.createMenus(this.name,this.description,'Main Dashboard','1,2','1,2,12',1)
-    response.subscribe((resp:any)=>{
-      this.apiresponse = resp
-      if (this.apiresponse.response === 'success') {
-        this.messageservice.add({ severity: 'success', summary: this.name, detail: 'User group created successfully' })
-        this.name = ''
-        this.description = ''
-      }
-      else {
-        this.messageservice.add({ severity: 'error', summary: this.apiresponse.err_msg, detail: 'Message Content' })
-      }
-    })
+    if (this.name==='' || this.description==='' || this.checkedportals.length===0 || this.checkedmenus.length === 0 || this.selectedDashboard.dropname==='') {
+      this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Enter values in required fields' })
+    }
+    else {
+      let response = this.ugservice.createMenus(this.name,this.description,this.selectedDashboard.dropname,this.checkedportals,this.checkedmenus,1)
+      response.subscribe((resp:any)=>{
+        this.apiresponse = resp
+        if (this.apiresponse.response === 'success') {
+          this.messageservice.add({ severity: 'success', summary: this.name, detail: 'User group created successfully' })
+          this.name = ''
+          this.description = ''
+          this.checkedmenus = []
+          this.checkedportals = []
+          this.selectedDashboard={dropid:0,dropname:''}
+        }
+        else {
+          this.messageservice.add({ severity: 'error', summary: this.apiresponse.err_msg, detail: 'Message Content' })
+        }
+      })
+    }
   }
   
   // getMenuList() {
