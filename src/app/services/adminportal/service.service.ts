@@ -23,4 +23,7 @@ export class ServiceService {
   }
     return this.http.post('http://localhost:234/jeevadhara/api/v1/createusergroup',payload,{headers:{'auth_value':secret.auth_value}})
   }
+  getUsergroups():Observable<any>{
+    return this.http.get('http://localhost:234/jeevadhara/api/v1/getusergroups',{headers:{'auth_value':secret.auth_value}})
+  }
 }

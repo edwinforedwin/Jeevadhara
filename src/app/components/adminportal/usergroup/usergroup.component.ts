@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common'
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
+import e from 'express';
 
 interface dropLists {
   dropid: number,
@@ -21,6 +22,14 @@ interface dropLists {
 interface apiresponse {
   response:string,
   err_msg:string
+}
+interface usergroups {
+  usergroup_id:number,
+  usergroup_name:string,
+  usergroup_description:string,
+  usergroup_dashboard:string,
+  usergroup_portal:string,
+  usergroup_menus:string
 }
 
 @Component({
@@ -49,6 +58,9 @@ export class UsergroupComponent {
   apiresponse:apiresponse={response:'',err_msg:''}
   checkedportals:string[]=[]
   checkedmenus:string[]=[]
+  viewVal:number=0
+  usergroupslist:usergroups[]=[]
+
 
   public ugservice = inject(ServiceService)
   public messageservice = inject(MessageService)
@@ -56,6 +68,12 @@ export class UsergroupComponent {
   public menus = this.ugservice.getMenus().pipe(map((resp:any)=>{
     return resp.ug_details.map((item:any)=>({
       dropid:item.menu_id,dropname:item.menu_name
+    }))
+  }))
+
+  public usergroupvalues = this.ugservice.getUsergroups().pipe(map((resp:any)=>{
+    return resp.ug_details.map((item:any)=>({
+      usergroup_id:item.usergroup_id,usergroup_name:item.usergroup_name,usergroup_description:item.usergroup_description,usergroup_dashboard:item.usergroup_dashboard,usergroup_portal:item.usergroup_portal,usergroup_menus:item.usergroup_menus
     }))
   }))
 
@@ -81,21 +99,19 @@ export class UsergroupComponent {
       })
     }
   }
-  
-  // getMenuList() {
-  //   let apiResp = this.ugservice.getMenus()
-  //   apiResp.subscribe((resp:any)=>{
-  //     this.menuList = resp
-  //     if (this.menuList.response === 'success') {
-  //       let apiresponse = JSON.stringify(this.menuList)
-  //       let apiresponsefinal = JSON.parse(apiresponse)
-  //       for (let index = 0; index < apiresponsefinal.ug_details.length; index++) {
-  //         const element = apiresponsefinal.ug_details[index];
-  //         let menuitem:dropLists = {dropid:element.menu_id,dropname:element.menu_name}
-  //         this.menuValues.push(menuitem)
-  //       }
-  //     }
-  //   })
-  // }
-
+  getusergroups() {
+    let response = this.ugservice.getUsergroups()
+    response.subscribe((resp:any)=>{
+      this.apiresponse = resp
+      if(this.apiresponse.response === 'success') {
+        let apiresponsevalue = JSON.stringify(this.apiresponse)
+        let apiresponsefinal = JSON.parse(apiresponsevalue)
+        for (let index = 0; index < apiresponsefinal.length; index++) {
+          const element = apiresponsefinal[index];
+          let usergroups:usergroups = {usergroup_id:element.usergroup_id,usergroup_name:element.usergroup_name,usergroup_description:element.usergroup_description,usergroup_dashboard:element.usergroup_dashboard,usergroup_portal:element.usergroup_portal,usergroup_menus:element.usergroup_menus}
+          this.usergroupslist.push(usergroups)
+        }
+      }
+    })
+  }
 }

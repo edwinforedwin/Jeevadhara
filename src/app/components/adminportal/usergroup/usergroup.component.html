@@ -50,10 +50,31 @@
                             <p-button label="Submit" (onClick)="createusergroup()" [raised]="true" />
                         </div>
                         <div class="sub-buttons">
-                            <p-button label="View" />
+                            <p-button label="View" #view (onClick)="getusergroups()" />
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="viewsection">
+                @defer (on interaction(view)) {
+                    @for (item of usergroupvalues | async; track item.usergroup_id) {
+                    <div class="pendinglist">
+                        <div class="pendingitem">
+                            <div>
+                                <i class="pi pi-list-check" style="font-size: 2.5rem"></i>
+                            </div>
+                            <div class="pendingsubject">
+                                <div>{{item.usergroup_name}}</div>
+                                <div>{{item.usergroup_description}}</div>
+                                <div>Submitted By: edwinuk</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p-button label="Edit" />
+                        </div>
+                    </div>
+                    }
+                }
             </div>
         </div>
     </div>
