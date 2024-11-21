@@ -56,7 +56,7 @@
     width: 30%;
 }
 ::ng-deep .p-fieldset {
-    height: 200px;
+    height: 280px;
     width: 100%;
     overflow-y:auto;
     font-size: 12px;
@@ -73,23 +73,20 @@
     justify-content: space-between;
 }
 .fieldset {
-    width: 40%;
+    width: 50%;
 }
 .buttons {
     height: 200px;
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: end;
     justify-content: end;
 }
-.sub-buttons {
-    width: 100%;
-}
 ::ng-deep .p-button {
     background-color: rgb(19,82,87);
-    width: 100%;
+    width: 200px;
     border: 0;
     font-family: 'Trebuchet MS';
 }
@@ -131,6 +128,4 @@ label {
     gap: 10px;
     overflow-y: auto;
     height: 35%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
