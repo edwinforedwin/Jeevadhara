@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,inject, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FloatLabelModule } from 'primeng/floatlabel';
@@ -7,6 +7,17 @@ import { DevicewhitelistingComponent } from "../devicewhitelisting/devicewhiteli
 import { FormsModule } from '@angular/forms';
 import { dropLists } from '../usercreation/usercreation.component'
 import { DropdownModule } from 'primeng/dropdown';
+import { ServiceService } from '../../../services/adminportal/service.service';
+import { map } from 'rxjs';
+
+interface states{
+  statename:string,
+  statecbscode:string
+}
+interface apiresponse {
+  response:string,
+  err_msg:string
+}
 
 @Component({
   selector: 'app-bcconfiguration',
@@ -15,13 +26,10 @@ import { DropdownModule } from 'primeng/dropdown';
   templateUrl: './bcconfiguration.component.html',
   styleUrl: './bcconfiguration.component.css'
 })
-export class BcconfigurationComponent {
+export class BcconfigurationComponent implements OnInit {
+  apiresponse:apiresponse={response:'',err_msg:''}
   bcname:string=''
   bcaddress:string=''
-  states:dropLists[]=[
-    {dropid:1,dropName:'Kerala'},
-    {dropid:2,dropName:'Tamil Nadu'}
-  ]
   districts:dropLists[]=[
     {dropid:1,dropName:'Palakkad'},
     {dropid:2,dropName:'Madurai'}
@@ -39,4 +47,22 @@ export class BcconfigurationComponent {
   bcauthname:string=''
   bcauthpan:string=''
   bcauthdesignation:string=''
+
+  public bcservice = inject(ServiceService)
+
+  public stateses = this.bcservice.getStates().pipe(map((resp:any)=>{
+    return resp.ug_details.map((item:any)=>({
+      statename:item.state_name,statecbscode:item.state_cbs_code
+    }))
+  }))
+  public states = this.bcservice.getStates().pipe(map((resp:any)=>{
+    return resp.ug_details.map((item:any)=>({
+      statename:item.state_name,statecbscode:item.state_cbs_code
+    }))
+  }))
+  ngOnInit() {
+    this.states.subscribe((resp:any)=>{
+      
+    })
+  }
 }

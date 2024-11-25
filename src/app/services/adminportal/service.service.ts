@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class ServiceService {
   constructor(private http:HttpClient) { }
 
+  //User Group Services
   getMenus():Observable<any>{
     return this.http.get('http://localhost:234/jeevadhara/api/v1/getmenus',{headers:{'auth_value':secret.auth_value}})
   }
@@ -25,5 +26,10 @@ export class ServiceService {
   }
   getUsergroups():Observable<any>{
     return this.http.get('http://localhost:234/jeevadhara/api/v1/getusergroups',{headers:{'auth_value':secret.auth_value}})
+  }
+  
+  //BC Configuration Services
+  getStates():Observable<any>{
+    return this.http.get('http://localhost:234/jeevadhara/api/v1/getstates',{headers:{'auth_value':secret.auth_value}})
   }
 }
