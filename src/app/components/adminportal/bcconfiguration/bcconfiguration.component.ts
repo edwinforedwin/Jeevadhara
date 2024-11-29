@@ -27,7 +27,7 @@ export class BcconfigurationComponent {
   bcaddress:string=''
   cities:dropLists[]=[
     {dropid:1,dropName:'Amakkavu'},
-    {dropid:2,dropName:'Nattika'}
+    {dropid:2,dropName:'Nattikas'}
   ]
   selectedstate:stateInterface={statename:'',statecbscode:'03'}
   selecteddistrict:dropLists[]=[]
