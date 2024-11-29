@@ -70,12 +70,6 @@ export class UsergroupComponent {
     }))
   }))
 
-  public usergroupvalues = this.ugservice.getUsergroups().pipe(map((resp:any)=>{
-    return resp.ug_details.map((item:any)=>({
-      usergroup_id:item.usergroup_id,usergroup_name:item.usergroup_name,usergroup_description:item.usergroup_description,usergroup_dashboard:item.usergroup_dashboard,usergroup_portal:item.usergroup_portal,usergroup_menus:item.usergroup_menus
-    }))
-  }))
-
   createusergroup(){
     if (this.name==='' || this.description==='' || this.checkedportals.length===0 || this.checkedmenus.length === 0 || this.selectedDashboard.dropname==='') {
       this.messageservice.add({ severity: 'error', summary: 'Error', detail: 'Enter values in required fields' })

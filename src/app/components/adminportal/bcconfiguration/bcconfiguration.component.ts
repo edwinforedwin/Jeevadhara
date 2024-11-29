@@ -9,6 +9,7 @@ import { dropLists } from '../usercreation/usercreation.component'
 import { DropdownModule } from 'primeng/dropdown';
 import { ServiceService } from '../../../services/adminportal/service.service';
 import { map } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 interface states{
   statename:string,
@@ -22,7 +23,7 @@ interface apiresponse {
 @Component({
   selector: 'app-bcconfiguration',
   standalone: true,
-  imports: [CardModule, ButtonModule, InputTextModule, FloatLabelModule, DevicewhitelistingComponent,FormsModule,DropdownModule],
+  imports: [CardModule, ButtonModule, InputTextModule, FloatLabelModule,FormsModule,DropdownModule,AsyncPipe],
   templateUrl: './bcconfiguration.component.html',
   styleUrl: './bcconfiguration.component.css'
 })

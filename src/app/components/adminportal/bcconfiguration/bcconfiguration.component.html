@@ -7,7 +7,7 @@
             <div class="field-set-one">
                 <div class="bcname">
                     <p-floatLabel>
-                        <input type="text" pInputText [(ngModel)]="bcname" (onClick)="getstates()" />
+                        <input type="text" pInputText [(ngModel)]="bcname" />
                         <label for="bcname">BC Name</label>
                     </p-floatLabel>
                 </div>
@@ -21,7 +21,7 @@
             <div class="field-set-one">
                 <div class="fields">
                     <p-floatLabel>
-                        <p-dropdown [options]="stateses" [(ngModel)]="selectedstate" optionLabel="dropName" />
+                        <p-dropdown [options]="stateses | async" [(ngModel)]="selectedstate" optionLabel="statename" />
                         <label for="selectedstate">Select State</label>
                     </p-floatLabel>
                 </div>
