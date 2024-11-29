@@ -32,4 +32,7 @@ export class ServiceService {
   getStates():Observable<any>{
     return this.http.get('http://localhost:234/jeevadhara/api/v1/getstates',{headers:{'auth_value':secret.auth_value}})
   }
+  getDistricts(state_code: string):Observable<any>{
+    return this.http.get('http://localhost:234/jeevadhara/api/v1/getdistricts',{headers:{'auth_value':secret.auth_value,'state_code':state_code}})
+  }
 }

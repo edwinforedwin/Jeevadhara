@@ -21,13 +21,13 @@
             <div class="field-set-one">
                 <div class="fields">
                     <p-floatLabel>
-                        <p-dropdown [options]="stateses | async" [(ngModel)]="selectedstate" optionLabel="statename" />
+                        <p-dropdown [options]="states | async" [(ngModel)]="selectedstate" optionLabel="statename" />
                         <label for="selectedstate">Select State</label>
                     </p-floatLabel>
                 </div>
                 <div class="fields">
                     <p-floatLabel>
-                        <p-dropdown [options]="districts" [(ngModel)]="selecteddistrict" optionLabel="dropName" />
+                        <p-dropdown [options]="districts | async" [(ngModel)]="selecteddistrict" optionLabel="districtname" />
                         <label for="selecteddistrict">Select District</label>
                     </p-floatLabel>
                 </div>
