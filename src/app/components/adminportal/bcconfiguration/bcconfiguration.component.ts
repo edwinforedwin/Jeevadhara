@@ -14,6 +14,10 @@ interface stateInterface {
   statename:string,
   statecbscode:string
 }
+interface districtInterface {
+  districtname:string,
+  districtcbscode:string
+}
 
 @Component({
   selector: 'app-bcconfiguration',
@@ -32,6 +36,7 @@ export class BcconfigurationComponent {
   selectedstate:stateInterface={statename:'',statecbscode:'03'}
   selecteddistrict:dropLists[]=[]
   selectedcity:dropLists[]=[]
+  districtValues:districtInterface[]=[]
   bcemail:string=''
   bcpan:string=''
   bcgst:string=''
